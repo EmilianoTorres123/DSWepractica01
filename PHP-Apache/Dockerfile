@@ -1,3 +1,4 @@
 FROM php:7.2-apache
-COPY web /var/www/html
 EXPOSE 80
+COPY web /var/www/html
+CMD ["php", "-S", "0.0.0.0:80", "-t", "/var/www/html"]
