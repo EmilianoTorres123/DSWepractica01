@@ -18,6 +18,5 @@ try {
         ':direccion' => $_REQUEST['direccion'],
         ':telefeno' => $_REQUEST['telefono']
     ];
-    
 } 
 ?>
