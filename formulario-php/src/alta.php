@@ -18,5 +18,18 @@ try {
         ':direccion' => $_REQUEST['direccion'],
         ':telefeno' => $_REQUEST['telefono']
     ];
+    
+    $result = $statement->execute($parameters);
+
+    if ($result) {
+        echo "Se registró el empleado.";
+    } else {
+        echo "Error en la consulta.";
+    }
+
+    // Cerrar la conexión PDO
+    $pdo = null;
+} catch (PDOException $e) {
+    echo "Error de conexión: " . $e->getMessage();
 } 
 ?>
